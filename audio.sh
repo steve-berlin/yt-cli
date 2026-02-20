@@ -58,3 +58,4 @@ yt-dlp -U --update-to nightly --abort-on-error --verbose \
   $dl_args \
   "$link" \
   -P "$path"
+rm *.part
