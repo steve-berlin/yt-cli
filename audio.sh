@@ -33,7 +33,9 @@ else
   echo "Choose a download format (type in a supported format like m4a, mp3, mp4 or webm): "
   read -r format
 fi
-
+if [ -z "$format" ]; then
+  format="m4a"
+fi
 echo "Choose path (default is ~/Music): "
 read -r path
 
