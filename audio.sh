@@ -42,9 +42,9 @@ read -r path
 # Fix 3: Handle empty path AND tilde expansion manually
 if [ -z "$path" ]; then
   path="$HOME/Music"
-else
+  #else
   # Bash 'read' does not expand '~' automatically. This regex replaces it with $HOME.
-  path="${path/#\~/$HOME}"
+  # path="${path/#\~/$HOME}"
 fi
 
 # Fix 4: Dynamic Command Construction
