@@ -27,7 +27,7 @@ fi
 if [ "$playlist_arg" = "--no-playlist" ]; then
   # Standard flag is -F, not --list-formats (though both work, -F is shorter)
   #  yt-dlp -F "$link"
-  echo "Choose an available audio format ID (e.g., 140) or extension (e.g., m4a). Defaukt is FLAC : "
+  echo "Choose an available audio format ID (e.g., 140) or extension (e.g., m4a). Default is FLAC : "
   read -r format
 else
   echo "Choose a download format (type in a supported format like m4a, mp3, mp4 or webm): "
