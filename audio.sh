@@ -36,12 +36,12 @@ fi
 if [ -z "$format" ]; then
   format="flac"
 fi
-echo "Choose path (default is ~/Music): "
+echo "Choose path (default is current): "
 read -r path
 
 # Fix 3: Handle empty path AND tilde expansion manually
 if [ -z "$path" ]; then
-  path="$HOME/Music"
+  path="."
   #else
   # Bash 'read' does not expand '~' automatically. This regex replaces it with $HOME.
   # path="${path/#\~/$HOME}"
