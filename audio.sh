@@ -27,7 +27,7 @@ fi
 if [ "$playlist_arg" = "--no-playlist" ]; then
   # Standard flag is -F, not --list-formats (though both work, -F is shorter)
   #  yt-dlp -F "$link"
-  echo "Choose an available audio format ID (e.g., 140) or extension (e.g., m4a). Default is FLAC : "
+  echo "Choose an available audio format ID (e.g., 140) or extension (e.g., m4a). Default is M4A : "
   read -r format
 else
   echo "Choose a download format (type in a supported format like m4a, mp3, mp4 or webm): "
@@ -64,7 +64,7 @@ fi
 # - Placed $playlist_arg as a standalone flag.
 # - Uses constructed $dl_args for correct format handling.
 
-yt-dlp -U --update-to nightly $on_e --verbose \
+yt-dlp -U --update-to nightly --extractor-args 'youtube:player_client=android' $on_e --verbose \
   $playlist_arg \
   $dl_args \
   "$link" \
