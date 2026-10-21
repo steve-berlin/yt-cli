@@ -34,7 +34,7 @@ else
   read -r format
 fi
 if [ -z "$format" ]; then
-  format="flac"
+  format="m4a"
 fi
 echo "Choose path (default is current): "
 read -r path
