@@ -3,7 +3,7 @@
 echo "Link: "
 read -r link
 echo 'Abort on error? (type "yes" or skip)'
-read -r isPlaylist
+read -r on_e
 
 # Fix 1: Correct variable assignment (no $) and comparison syntax (spaces needed)
 if [ "$isPlaylist" = "yes" ]; then
