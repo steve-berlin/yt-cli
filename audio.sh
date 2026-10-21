@@ -6,7 +6,7 @@ echo 'Abort on error? (type "yes" or skip)'
 read -r on_e
 
 # Fix 1: Correct variable assignment (no $) and comparison syntax (spaces needed)
-if [ "$isPlaylist" = "yes" ]; then
+if [ "$on_e" = "yes" ]; then
   on_e="--abort-on-error"
 else
   on_e=""
